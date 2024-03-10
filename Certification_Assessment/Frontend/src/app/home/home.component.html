@@ -1,0 +1,30 @@
+<br />
+<div class="container-fluid">
+  <div class="p-5 mb-4 bg-light rounded-3">
+    <div class="container-fluid py-1">
+      <figure class="text-center">
+        <blockquote class="blockquote">
+          <p class="display-2">An Antique is anything old with class</p>
+        </blockquote>
+        <figcaption class="display-6">
+          - John Bartlett
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+
+
+  <br />
+
+  <div class="row row-cols-1 row-cols-md-4">
+    <div class="col" *ngFor="let catergory of categoryData">
+      <div class="card">
+        <img src={{catergory.image}} class="card-img-top" alt="catergory">
+        <div class="card-body">
+          <h5 class="card-title">{{catergory.name}}</h5>
+          <p class="card-text">{{catergory.description}}</p>
+        </div>
+      </div>
+    </div>
+
+  </div>

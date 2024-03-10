@@ -1,0 +1,1465 @@
+<html>
+
+<head>
+    <link rel='stylesheet' href='./css/styles.ec294d85b6bb1cdfb839.css'>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <link href="./css/styles.css" rel="stylesheet" />
+    <script src='./js/jquery.min.js' rel='text/javascript'></script>
+    <script src='./js/jquery-ui.min.js' rel='text/javascript'></script>
+    <script src='./js/bootstrap.js' rel='text/javascript'></script>
+
+</head>
+<style>
+    .accordion-button::after {
+        margin-left: -10;
+    }
+</style>
+
+<body>
+    <nav class='uk-navbar-container uk-navbar'>
+        <div class='uk-navbar-left'>
+            <img style='float:left;margin-top:8px;margin-left:15px;margin-right:15px;margin-bottom:8px'
+                src='img/Asset 8.png' />
+            <a class='uk-margin-left-small uk-button uk-button-primary decpadding' href='#' id='questions'
+                onclick='showWelcome()'>
+                <span class='nav-text uk-visible@s'>ASSESSMENT INSTRUCTIONS</span>
+            </a>
+            <a class='uk-margin-left-small uk-button uk-button-primary decpadding' href='#' id='instructions'
+                onclick='showInstructions()'>
+                <span class='nav-text uk-visible@s'>PROJECT INSTRUCTIONS</span>
+            </a>
+            <a class='uk-button uk-button-primary decpadding' href='#' id='questions' onclick='showQuestions()'>
+                <span class='nav-text uk-visible@s'>PROBLEM STATEMENT</span>
+            </a>
+            <a class='uk-button uk-button-primary decpadding' href='#' id='steps' onclick='showSteps()'>
+                <span class='nav-text uk-visible@s'>STEP-BY-STEP GUIDE</span>
+            </a>
+        </div>
+    </nav>
+
+
+
+    <div class='uk-container'>
+
+        <!---------------------------------------------------------------------------------- -->
+        <div style='display:none' id='steps_p'>
+            <br>
+            <br>
+            <div>
+                <div align='center'>
+                    <span class='heading'> Angular Assessment </span>
+                </div>
+            </div>
+            <br>
+            <div>
+                <div style='border:2px solid black;padding: 5px;'>
+                    Note: On clicking Execute button for the first time for test cases, in case you see any message like
+                    Compilation Error in Project/Result
+                    File Not Found, Click on &lsquo;Execute&rsquo; again.
+                </div>
+                <p style='margin-bottom: .0001pt; line-height: normal; background: white;'>
+                    <span style='font-size: 12.0pt; font-family: "Segoe UI",sans-serif; color: black;'>&nbsp;</span>
+                </p>
+                <span class='heading'>Requirements:</span>
+
+                <br />
+                <p style='margin-bottom: .0001pt; line-height: normal; background: white;'>
+                    <span style='font-size: 12.0pt; font-family: "Segoe UI",sans-serif; color: black;'>&nbsp;</span>
+                </p>
+                <p>
+                    Create AntiqMart application by implementing the below 6 requirements.
+                    It is recommended to code the requirements in the mentioned order.
+                </p>
+                </p>
+                <p style='margin-bottom: .0001pt; line-height: normal; background: white;'>
+                    <span style='font-size: 12.0pt; font-family: "Segoe UI",sans-serif; color: black;'>&nbsp;</span>
+                </p>
+            </div>
+            <div class="accordion" id="step1">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+
+                            <div class="col-md-9">
+                                <strong>Requirement-1:</strong>&nbsp;Configure routes
+                            </div>
+                          
+                            <div class="col-md-3">
+                                <strong>Approx.Marks:</strong> 8/70
+                            </div>
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                        data-bs-parent="#step1">
+                        <div class="accordion-body">
+                            <!-- <strong>Description:</strong> Configure the Routing Paths
+                            <p style='margin-bottom: .0001pt; line-height: normal; background: white;'>
+                                <span
+                                    style='font-size: 12.0pt; font-family: "Segoe UI",sans-serif; color: black;'>&nbsp;</span>
+                            </p> -->
+
+
+                            <div>
+                                <strong>Description:</strong> Implement the routes for the application as per details in
+                                below table:
+                                <br />
+                            </div>
+
+
+                            <table
+                                style="margin-left: 35.0pt; margin-top: 10px; border-collapse: collapse; border: none;">
+
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 161.75pt; border: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt;"
+                                            width="216">
+                                            <p style="line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;"><strong><span
+                                                        style="line-height: 150%; font-family: 'Segoe UI',sans-serif;"><b>Path</b></span></strong>
+                                            </p>
+                                        </td>
+                                        <td style="width: 175.5pt; border: solid windowtext 1.0pt; border-left: none; padding: 0cm 5.4pt 0cm 5.4pt;"
+                                            width="234">
+                                            <p style="line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;"><strong><span
+                                                        style="line-height: 150%; font-family: 'Segoe UI',sans-serif;"><b>Component</b></span></strong>
+                                            </p>
+                                        </td>
+                                        <td style="width: 176.5pt; border: solid windowtext 1.0pt; border-left: none; padding: 0cm 5.4pt 0cm 5.4pt;"
+                                            width="250">
+                                            <p style="line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;"><strong><span
+                                                        style="line-height: 150%; font-family: 'Segoe UI',sans-serif;"><b>Description</b></span></strong>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 161.75pt; border: solid windowtext 1.0pt; border-top: none; padding: 0cm 5.4pt 0cm 5.4pt;"
+                                            width="216">
+                                            <p style="line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;"><span
+                                                    style="line-height: 150%; font-family: 'Segoe UI',sans-serif;">/home
+                                                    (Default Path)</span></p>
+                                        </td>
+                                        <td style="width: 175.5pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt;"
+                                            width="234">
+                                            <p style="line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;"><span
+                                                    style="line-height: 150%; font-family: 'Segoe UI',sans-serif;">Home
+                                                    Component</span></p>
+                                        </td>
+                                        <td style="width: 76.5pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt;"
+                                            width="104">
+                                            <p style="line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;"><span
+                                                    style="line-height: 150%; font-family: 'Segoe UI',sans-serif;">-</span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 161.75pt; border: solid windowtext 1.0pt; border-top: none; padding: 0cm 5.4pt 0cm 5.4pt;"
+                                            width="216">
+                                            <p style="line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;"><span
+                                                    style="line-height: 150%; font-family: 'Segoe UI',sans-serif;">/products</span>
+                                            </p>
+                                        </td>
+                                        <td style="width: 175.5pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt;"
+                                            width="234">
+                                            <p style="line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;"><span
+                                                    style="line-height: 150%; font-family: 'Segoe UI',sans-serif;">Products
+                                                    Component </span></p>
+                                        </td>
+                                        <td style="width: 76.5pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt;"
+                                            width="104">
+                                            <p style="line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;"><span
+                                                    style="line-height: 150%; font-family: 'Segoe UI',sans-serif;">-</span>
+                                            </p>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td style="width: 161.75pt; border: solid windowtext 1.0pt; border-top: none; padding: 0cm 5.4pt 0cm 5.4pt;"
+                                            width="216">
+                                            <p style="line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;"><span
+                                                    style="line-height: 150%; font-family: 'Segoe UI',sans-serif;">/enquire-order/:id</span>
+                                            </p>
+                                        </td>
+                                        <td style="width: 175.5pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt;"
+                                            width="234">
+                                            <p style="line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;"><span
+                                                    style="line-height: 150%; font-family: 'Segoe UI',sans-serif;">EnquireOrder
+                                                    Component</span></p>
+                                        </td>
+                                        <td style="width: 76.5pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt;"
+                                            width="104">
+                                            <p style="line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;"><span
+                                                    style="line-height: 150%; font-family: 'Segoe UI',sans-serif;">-</span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 161.75pt; border: solid windowtext 1.0pt; border-top: none; padding: 0cm 5.4pt 0cm 5.4pt;"
+                                            width="216">
+                                            <p style="line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;"><span
+                                                    style="line-height: 150%; font-family: 'Segoe UI',sans-serif;">Invalid
+                                                    Path</span></p>
+                                        </td>
+                                        <td style="width: 175.5pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt;"
+                                            width="234">
+                                            <p style="line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;"><span
+                                                    style="line-height: 150%; font-family: 'Segoe UI',sans-serif;">Redirect
+                                                    to
+                                                    '/home'</span></p>
+                                        </td>
+                                        <td style="width: 76.5pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt;"
+                                            width="104">
+                                            <p style="line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;"><span
+                                                    style="line-height: 150%; font-family: 'Segoe UI',sans-serif;">Example:/client,
+                                                    /xyz, /invalid
+                                                    etc. should redirect to path /home </span></p>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                            <p style='margin-bottom: .0001pt; line-height: normal; background: white;'>
+                                <span
+                                    style='font-size: 12.0pt; font-family: "Segoe UI",sans-serif; color: black;'>&nbsp;</span>
+                            </p>
+                             <strong>File to Edit:</strong> app-routing.module.ts
+                             <p style='margin-bottom: .0001pt; line-height: normal; background: white;'>
+                                <span
+                                    style='font-size: 12.0pt; font-family: "Segoe UI",sans-serif; color: black;'>&nbsp;</span>
+                            </p>
+                            <div><strong>Test cases to be passed for this requirement: 3</strong></div>
+                           
+                            <p style='margin-bottom: .0001pt; line-height: normal; background: white;'>
+                                <span
+                                    style='font-size: 12.0pt; font-family: "Segoe UI",sans-serif; color: black;'>&nbsp;</span>
+                            </p>
+
+                            <div>
+                                <strong>Output:</strong>
+                                <br>
+                                <div> Note: Below is the output that can be observed after 1<sup>st</sup> requirement.
+                                    Respective components UI will be updated as you proceed with implementation of subsequent requirements.
+
+                                </div>
+                                <br>
+                            </div>
+                            <img src='./gif/routing2.gif'>
+                            <p style='margin-bottom: .0001pt; line-height: normal; background: white;'>
+                                <span
+                                    style='font-size: 12.0pt; font-family: "Segoe UI",sans-serif; color: black;'>&nbsp;</span>
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#steps4" aria-expanded="false" aria-controls="steps3">
+
+
+                            <div class="col-md-9">
+                                <strong>Requirement-2:</strong>&nbsp;Service calls
+                            </div>
+                            <!-- <div class="col-md-6">
+                                <strong>File to Edit:</strong> shared.service.ts
+                            </div> -->
+                            <div class="col-md-3"> <strong>Approx.Marks: </strong>5/70</div>
+                    </h2>
+                    <div id="steps4" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#step1">
+                        <div class="accordion-body">
+                            <!-- <strong>Description:</strong> Configure the Filter Pipe that filters the particular category
+                            from list of products in filter.pipe.ts
+                            <p style='margin-bottom: .0001pt; line-height: normal; background: white;'>
+                                <span
+                                    style='font-size: 12.0pt; font-family: "Segoe UI",sans-serif; color: black;'>&nbsp;</span>
+                            </p> -->
+
+
+                            <p style='margin-bottom: .0001pt; line-height: normal; background: white;'>
+                                <span
+                                    style='font-size: 12.0pt; font-family: "Segoe UI",sans-serif; color: black;'>&nbsp;</span>
+                            </p>
+                            <div>
+                                <strong>Description:</strong> The interactions with the Backend APIs should be
+                                implemented here.
+
+                            </div>
+
+                            <table
+                                style="margin-left: 35.0pt; margin-top: 10px; border-collapse: collapse; border: none;">
+
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 161.75pt; border: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt;"
+                                            width="216">
+                                            <p style="line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;"><strong><span
+                                                        style="line-height: 150%; font-family: 'Segoe UI',sans-serif;"><b>Method
+                                                            Name</b></span></strong>
+                                            </p>
+                                        </td>
+                                        <td style="width: 105.5pt; border: solid windowtext 1.0pt; border-left: none; padding: 0cm 5.4pt 0cm 5.4pt;"
+                                            width="234">
+                                            <p style="line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;"><strong><span
+                                                        style="line-height: 150%; font-family: 'Segoe UI',sans-serif;"><b>HTTP
+                                                            Method</b></span></strong>
+                                            </p>
+                                        </td>
+                                        <td style="width: 276.5pt; border: solid windowtext 1.0pt; border-left: none; padding: 0cm 5.4pt 0cm 5.4pt;"
+                                            width="250">
+                                            <p style="line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;"><strong><span
+                                                        style="line-height: 150%; font-family: 'Segoe UI',sans-serif;"><b>Description</b></span></strong>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 161.75pt; border: solid windowtext 1.0pt; border-top: none; padding: 0cm 5.4pt 0cm 5.4pt;"
+                                            width="216">
+                                            <p style="line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;"><span
+                                                    style="line-height: 150%; font-family: 'Segoe UI',sans-serif;">
+                                                    getProductListDetails()</span></p>
+                                        </td>
+                                        <td style="width: 105.5pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt;"
+                                            width="234">
+                                            <p style="line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;"><span
+                                                    style="line-height: 150%; font-family: 'Segoe UI',sans-serif;">GET</span>
+                                            </p>
+                                        </td>
+                                        <td style="width: 276.5pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt;"
+                                            width="104">
+                                            <p style="line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;"><span
+                                                    style="line-height: 150%; font-family: 'Segoe UI',sans-serif;">http://localhost:3020/products</span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 161.75pt; border: solid windowtext 1.0pt; border-top: none; padding: 0cm 5.4pt 0cm 5.4pt;"
+                                            width="216">
+                                            <p style="line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;"><span
+                                                    style="line-height: 150%; font-family: 'Segoe UI',sans-serif;">
+
+                                                    getProductDetails()
+
+                                                </span>
+                                            </p>
+                                        </td>
+                                        <td style="width: 105.5pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt;"
+                                            width="234">
+                                            <p style="line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;"><span
+                                                    style="line-height: 150%; font-family: 'Segoe UI',sans-serif;"> GET
+                                                </span></p>
+                                        </td>
+                                        <td style="width: 276.5pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt;"
+                                            width="104">
+                                            <p style="line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;"><span
+                                                    style="line-height: 150%; font-family: 'Segoe UI',sans-serif;">http://localhost:3020/products/:id
+                                                </span>
+                                            </p>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td style="width: 161.75pt; border: solid windowtext 1.0pt; border-top: none; padding: 0cm 5.4pt 0cm 5.4pt;"
+                                            width="216">
+                                            <p style="line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;"><span
+                                                    style="line-height: 150%; font-family: 'Segoe UI',sans-serif;">
+
+                                                    enquireOrder()
+
+                                                </span>
+                                            </p>
+                                        </td>
+                                        <td style="width: 105.5pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt;"
+                                            width="234">
+                                            <p style="line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;"><span
+                                                    style="line-height: 150%; font-family: 'Segoe UI',sans-serif;"> POST
+                                                </span></p>
+                                        </td>
+                                        <td style="width: 276.5pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt;"
+                                            width="104">
+                                            <p style="line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;"><span
+                                                    style="line-height: 150%; font-family: 'Segoe UI',sans-serif;">
+                                                    http://localhost:3020/enquiries </span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <p style='margin-bottom: .0001pt; line-height: normal; background: white;'>
+                                <span
+                                    style='font-size: 12.0pt; font-family: "Segoe UI",sans-serif; color: black;'>&nbsp;</span>
+                            </p>
+                            <strong>File to Edit:</strong> shared.service.ts
+                            <p style='margin-bottom: .0001pt; line-height: normal; background: white;'>
+                                <span
+                                    style='font-size: 12.0pt; font-family: "Segoe UI",sans-serif; color: black;'>&nbsp;</span>
+                            </p>
+                            <div><strong>Test cases to be passed for this requirement: 2</strong></div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#steps3" aria-expanded="false" aria-controls="steps3">
+                        <div class="col-md-9">
+                            <strong>Requirement-3:</strong>&nbsp;View products
+                        </div>
+                        <!-- <div class="col-md-6">
+                            <strong>Files to Edit:</strong> products.component.ts, products.component.html
+                        </div> -->
+
+                        <div class="col-md-3"> <strong>Approx.Marks: </strong>5/70</div>
+
+                    </button>
+                </h2>
+                <div id="steps3" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#step1">
+                    <div class="accordion-body">
+                        <!-- <strong>Description:</strong> Configure the Filter Pipe that filters the particular category
+                            from list of products in filter.pipe.ts
+                            <p style='margin-bottom: .0001pt; line-height: normal; background: white;'>
+                                <span
+                                    style='font-size: 12.0pt; font-family: "Segoe UI",sans-serif; color: black;'>&nbsp;</span>
+                            </p> -->
+
+
+                        <p style='margin-bottom: .0001pt; line-height: normal; background: white;'>
+                            <span
+                                style='font-size: 12.0pt; font-family: "Segoe UI",sans-serif; color: black;'>&nbsp;</span>
+                        </p>
+                        <div>
+                            <strong>Description: </strong> The logic to view various antique items should be implemented
+                            here.
+                            <ol style="margin-top: 7px;">
+
+                                <li>
+                                    Fetch the product list by
+                                    invoking getProductListDetails()
+                                    method of SharedService.
+                                </li>
+                                <li>
+
+                                    On initial load, display the data of all products.
+
+                                </li>
+                                
+                                <li>
+                                    On click of view details button load ViewDetailsComponent and pass the data
+                                    of the selected product to it by establishing Parent (ProductsComponent) - Child
+                                    (ViewDetailsComponent) relationship
+                                </li>
+
+                            </ol>
+
+
+
+
+                        </div>
+                        <strong>Files to Edit:</strong> products.component.ts, products.component.html
+                        <p style='margin-bottom: .0001pt; line-height: normal; background: white;'>
+                            <span
+                                style='font-size: 12.0pt; font-family: "Segoe UI",sans-serif; color: black;'>&nbsp;</span>
+                        </p>
+                        <div><strong>Test cases to be passed for this requirement: 2</strong></div>
+                        <p style='margin-bottom: .0001pt; line-height: normal; background: white;'>
+                            <span
+                                style='font-size: 12.0pt; font-family: "Segoe UI",sans-serif; color: black;'>&nbsp;</span>
+                        </p>
+                        <div>
+                            <strong>Output:</strong>
+
+                            <br><br>
+                        </div>
+                        <div align='center'>
+                            <img src="./gif/req2.gif" />
+                        </div>
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#step2" aria-expanded="false" aria-controls="step2">
+
+                        <div class="col-md-9">
+                            <strong>Requirement-4:</strong> Filter products
+
+                        </div>
+
+                        <div class="col-md-3"> <strong>Approx.Marks:</strong> 5/70</div>
+                    </button>
+                </h2>
+                <div id="step2" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#step1">
+                    <div class="accordion-body">
+                        <!-- <strong>Description:</strong> Configure the Filter Pipe that filters the particular category
+                        from list of products in filter.pipe.ts
+                        <p style='margin-bottom: .0001pt; line-height: normal; background: white;'>
+                            <span
+                                style='font-size: 12.0pt; font-family: "Segoe UI",sans-serif; color: black;'>&nbsp;</span>
+                        </p> -->
+
+
+                        <p style='margin-bottom: .0001pt; line-height: normal; background: white;'>
+                            <span
+                                style='font-size: 12.0pt; font-family: "Segoe UI",sans-serif; color: black;'>&nbsp;</span>
+                        </p>
+                        <div>
+                            <strong>Description:</strong>
+                            Filter the products based on category type
+                           
+                          <ol style="margin-top: 7px;">
+                            <li>
+                                Configure the custom pipe to filter the products array based on category in filter.pipe.ts              
+                            </li>
+                               <li>
+                                        Create a dropdown with categories in products.component.html
+                                    </li>
+                                    <li>
+                                        Make use of custom pipe to filter the products.
+                                    </li>
+                              
+
+                        </ol>
+
+
+                        </div>
+
+                      
+                        <!-- <p> For example, if selected product category is <strong>clock</strong> then: </p> -->
+
+
+                        <div>
+                            <strong>File to Edit:</strong> filter.pipe.ts, products.component.html
+                        </div>
+
+                        <p style='margin-bottom: .0001pt; line-height: normal; background: white;'>
+                            <span
+                                style='font-size: 12.0pt; font-family: "Segoe UI",sans-serif; color: black;'>&nbsp;</span>
+                        </p>
+                     
+                        <div>
+                            <div><strong>Test cases to be passed for this requirement: 2</strong></div>
+                        </div>
+                        <p style='margin-bottom: .0001pt; line-height: normal; background: white;'>
+                            <span
+                                style='font-size: 12.0pt; font-family: "Segoe UI",sans-serif; color: black;'>&nbsp;</span>
+                        </p>
+                        <div>
+                            <strong>Output:</strong>
+
+                            <br><br>
+                        </div>
+                        <div align="center">
+                            <img src="gif/req4.gif" />
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#steps5" aria-expanded="false" aria-controls="steps5">
+
+                        <div class="col-md-9">
+                            <strong>Requirement-5:</strong>&nbsp;View product details
+                        </div>
+                        <!-- <div class="col-md-6">
+                            <strong>Files to Edit:</strong> view-details.component.ts, view-details.component.html
+                        </div> -->
+                        <div class="col-md-3"> <strong>Approx.Marks: </strong>3/70</div>
+
+                    </button>
+                </h2>
+                <div id="steps5" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#step1">
+                    <div class="accordion-body">
+                        <!-- <strong>Description:</strong> Configure the Filter Pipe that filters the particular category
+                            from list of products in filter.pipe.ts
+                            <p style='margin-bottom: .0001pt; line-height: normal; background: white;'>
+                                <span
+                                    style='font-size: 12.0pt; font-family: "Segoe UI",sans-serif; color: black;'>&nbsp;</span>
+                            </p> -->
+
+
+                        <p style='margin-bottom: .0001pt; line-height: normal; background: white;'>
+                            <span
+                                style='font-size: 12.0pt; font-family: "Segoe UI",sans-serif; color: black;'>&nbsp;</span>
+                        </p>
+                        <div>
+                            <strong>Description: </strong>This component should take care of displaying the details of
+                            the particular product.
+                            <ol style="margin-top: 7px;">
+
+                                <li>
+                                    Retrieve the product data shared by the ProductsComponent and display it.
+                                </li>
+                                <li>
+
+                                    On click of Enquire Order button, navigate to
+                                    '/enquire-order/:id' path to move to the EnquireOrder Component.
+                                </li>
+
+
+                            </ol>
+
+
+
+
+                        </div>
+                        <strong>Files to Edit:</strong> view-details.component.ts, view-details.component.html
+                        <p style='margin-bottom: .0001pt; line-height: normal; background: white;'>
+                            <span
+                                style='font-size: 12.0pt; font-family: "Segoe UI",sans-serif; color: black;'>&nbsp;</span>
+                        </p>
+                        <!-- <hr style="color: red;" /> -->
+                        <div><strong>Test cases to be passed for this requirement: 1</strong></div>
+                        <p style='margin-bottom: .0001pt; line-height: normal; background: white;'>
+                            <span
+                                style='font-size: 12.0pt; font-family: "Segoe UI",sans-serif; color: black;'>&nbsp;</span>
+                        </p>
+                        <div>
+                            <strong>Output:</strong>
+
+                            <br><br>
+                        </div>
+                        <img src="./img/am_4.PNG" />
+                        <p style='margin-bottom: .0001pt; line-height: normal; background: white;'>
+                            <span
+                                style='font-size: 12.0pt; font-family: "Segoe UI",sans-serif; color: black;'>&nbsp;</span>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#steps6" aria-expanded="false" aria-controls="steps5">
+
+
+                        <div class="col-md-9">
+                            <strong>Requirement-6:</strong>&nbsp;Enquire order
+
+                        </div>
+                        <!-- <div class="col-md-6">
+                            <strong>Files to Edit:</strong> enquire-order.component.ts, enquire-order.component.html
+                        </div> -->
+                        <div class="col-md-3">  <strong>Approx.Marks: </strong>44/70</div>
+                    </button>
+                </h2>
+                <div id="steps6" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#step1">
+                    <div class="accordion-body">
+
+
+                        <p style='margin-bottom: .0001pt; line-height: normal; background: white;'>
+                            <span
+                                style='font-size: 12.0pt; font-family: "Segoe UI",sans-serif; color: black;'>&nbsp;</span>
+                        </p>
+                        <div>
+                            <strong>Description: </strong>This component should take care of placing an enquiry order
+                            for the particular product.
+                            <ol style="margin-top: 7px;">
+
+                                <li>
+                                    Invoke getProductDetails() method of SharedService by passing 'id' value that can
+                                    be retrieved from the route.
+
+                                </li>
+                                <li>
+                                    <div style='line-height: 150%; font-family: "Segoe UI",sans-serif;'>
+                                        Then, create a form having form controls with names as mentioned in table below.
+                                        Configure the mentioned validations inside the component.
+
+
+                                    </div>
+                                    <table style='margin-left: 35.75pt; border-collapse: collapse; border: none;'>
+                                        <tbody>
+                                            <tr>
+                                                <td style='width: 200.2pt; border: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt;'
+                                                    width='140'>
+                                                    <p
+                                                        style='text-align: center; line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;'>
+                                                        <strong>
+                                                            <span
+                                                                style='line-height: 150%; font-family: "Segoe UI",sans-serif;'>
+                                                                <b>Form Control Name</b>
+                                                            </span>
+                                                        </strong>
+                                                    </p>
+                                                </td>
+                                                <td style='width: 324.0pt; border: solid windowtext 1.0pt; border-left: none; padding: 0cm 5.4pt 0cm 5.4pt;'
+                                                    width='432'>
+                                                    <p
+                                                        style='text-align: center; line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;'>
+                                                        <strong>
+                                                            <span
+                                                                style='line-height: 150%; font-family: "Segoe UI",sans-serif;'>
+                                                                <b>Validations Required</b>
+                                                            </span>
+                                                        </strong>
+                                                    </p>
+                                                </td>
+
+
+                                                <td style='width: 324.0pt; border: solid windowtext 1.0pt; border-left: none; padding: 0cm 5.4pt 0cm 5.4pt;'
+                                                    width='432'>
+                                                    <p
+                                                        style='text-align: center; line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;'>
+                                                        <strong>
+                                                            <span
+                                                                style='line-height: 150%; font-family: "Segoe UI",sans-serif;'>
+                                                                <b>Validation Messages</b>
+                                                            </span>
+                                                        </strong>
+                                                    </p>
+                                                </td>
+
+
+
+                                            </tr>
+                                            <tr>
+                                                <td style='width: 105.2pt; border: solid windowtext 1.0pt; border-top: none; padding: 0cm 5.4pt 0cm 5.4pt;'
+                                                    width='140'>
+                                                    <p style='line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;'>
+                                                        <span
+                                                            style='line-height: 150%; font-family: "Segoe UI",sans-serif;'>id</span>
+                                                    </p>
+                                                </td>
+                                                <td style='width: 324.0pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt;'
+                                                    width='432'>
+                                                    <p style='line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;'>
+                                                        <span
+                                                            style='line-height: 150%; font-family: "Segoe UI",sans-serif;'>disabled
+                                                        </span>
+                                                    </p>
+                                                </td>
+
+                                                <td style='width: 324.0pt; border: solid windowtext 1.0pt; border-left: none; padding: 0cm 5.4pt 0cm 5.4pt;'
+                                                    width='432'>
+                                                    <p
+                                                        style='text-align: center; line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;'>
+
+                                                        <span
+                                                            style='line-height: 150%; font-family: "Segoe UI",sans-serif;'>
+                                                            -
+                                                        </span>
+
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style='width: 105.2pt; border: solid windowtext 1.0pt; border-top: none; padding: 0cm 5.4pt 0cm 5.4pt;'
+                                                    width='140'>
+                                                    <p style='line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;'>
+                                                        <span
+                                                            style='line-height: 150%; font-family: "Segoe UI",sans-serif;'>productName</span>
+                                                    </p>
+                                                </td>
+                                                <td style='width: 324.0pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt;'
+                                                    width='432'>
+                                                    <p style='line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;'>
+                                                        <span
+                                                            style='line-height: 150%; font-family: "Segoe UI",sans-serif;'>disabled</span>
+                                                    </p>
+                                                </td>
+                                                <td style='width: 324.0pt; border: solid windowtext 1.0pt; border-left: none; padding: 0cm 5.4pt 0cm 5.4pt;'
+                                                    width='432'>
+                                                    <p
+                                                        style='text-align: center; line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;'>
+
+                                                        <span
+                                                            style='line-height: 150%; font-family: "Segoe UI",sans-serif;'>
+                                                            -
+                                                        </span>
+
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style='width: 105.2pt; border: solid windowtext 1.0pt; border-top: none; padding: 0cm 5.4pt 0cm 5.4pt;'
+                                                    width='140'>
+                                                    <p style='line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;'>
+                                                        <span
+                                                            style='line-height: 150%; font-family: "Segoe UI",sans-serif;'>cost</span>
+                                                    </p>
+                                                </td>
+                                                <td style='width: 324.0pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt;'
+                                                    width='432'>
+                                                    <p style='line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;'>
+                                                        <span
+                                                            style='line-height: 150%; font-family: "Segoe UI",sans-serif;'>
+                                                            disabled
+
+                                                        </span>
+                                                    </p>
+                                                </td>
+                                                <td style='width: 324.0pt; border: solid windowtext 1.0pt; border-left: none; padding: 0cm 5.4pt 0cm 5.4pt;'
+                                                    width='432'>
+                                                    <p
+                                                        style='text-align: center; line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;'>
+
+                                                        <span
+                                                            style='line-height: 150%; font-family: "Segoe UI",sans-serif;'>
+                                                            -
+                                                        </span>
+
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan=2
+                                                    style='width: 105.2pt; border: solid windowtext 1.0pt; border-top: none; padding: 0cm 5.4pt 0cm 5.4pt;'
+                                                    width='140'>
+                                                    <p style='line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;'>
+                                                        <span
+                                                            style='line-height: 150%; font-family: "Segoe UI",sans-serif;'>message</span>
+                                                    </p>
+                                                </td>
+                                                <td style='width: 324.0pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt;'
+                                                    width='432'>
+                                                    <p style='line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;'>
+                                                        <span
+                                                            style='line-height: 150%; font-family: "Segoe UI",sans-serif;'>Required
+                                                        </span>
+                                                    </p>
+                                                </td>
+                                                <td style='width: 324.0pt; border: solid windowtext 1.0pt; border-left: none; padding: 0cm 5.4pt 0cm 5.4pt;'
+                                                    width='432'>
+                                                    <p
+                                                        style='text-align: center; line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;'>
+
+                                                        <span
+                                                            style='line-height: 150%; font-family: "Segoe UI",sans-serif;'>
+                                                            This field is required!
+                                                        </span>
+
+                                                    </p>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+
+                                                <td style='width: 324.0pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt;'
+                                                    width='432'>
+                                                    <p style='line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;'>
+                                                        <span
+                                                            style='line-height: 150%; font-family: "Segoe UI",sans-serif;'>
+                                                            Pattern validation - To contain only text characters and whitespaces</span>
+                                                    </p>
+                                                </td>
+                                                <td style='width: 324.0pt; border: solid windowtext 1.0pt; border-left: none; padding: 0cm 5.4pt 0cm 5.4pt;'
+                                                    width='432'>
+                                                    <p
+                                                        style='text-align: center; line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;'>
+
+                                                        <span
+                                                            style='line-height: 150%; font-family: "Segoe UI",sans-serif;'>
+                                                            Match the required pattern!
+                                                        </span>
+
+                                                    </p>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td rowspan=2
+                                                    style='width: 105.2pt; border: solid windowtext 1.0pt; border-top: none; padding: 0cm 5.4pt 0cm 5.4pt;'
+                                                    width='140'>
+                                                    <p style='line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;'>
+                                                        <span
+                                                            style='line-height: 150%; font-family: "Segoe UI",sans-serif;'>mobile</span>
+                                                    </p>
+                                                </td>
+                                                <td style='width: 324.0pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt;'
+                                                    width='432'>
+                                                    <p style='line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;'>
+                                                        <span
+                                                            style='line-height: 150%; font-family: "Segoe UI",sans-serif;'>Required
+                                                        </span>
+                                                    </p>
+                                                </td>
+
+                                                <td style='width: 324.0pt; border: solid windowtext 1.0pt; border-left: none; padding: 0cm 5.4pt 0cm 5.4pt;'
+                                                    width='432'>
+                                                    <p
+                                                        style='text-align: center; line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;'>
+
+                                                        <span
+                                                            style='line-height: 150%; font-family: "Segoe UI",sans-serif;'>
+                                                            This field is required!
+                                                        </span>
+
+                                                    </p>
+                                                </td>
+
+
+                                            </tr>
+
+
+                                            <tr>
+
+                                                <td style='width: 324.0pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt;'
+                                                    width='432'>
+                                                    <p style='line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;'>
+                                                        <span
+                                                            style='line-height: 150%; font-family: "Segoe UI",sans-serif;'>
+                                                            Pattern validation - Mobile number should contain exactly
+                                                            10
+                                                            digits</span>
+                                                    </p>
+                                                </td>
+
+                                                <td style='width: 324.0pt; border: solid windowtext 1.0pt; border-left: none; padding: 0cm 5.4pt 0cm 5.4pt;'
+                                                    width='432'>
+                                                    <p
+                                                        style='text-align: center; line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;'>
+
+                                                        <span
+                                                            style='line-height: 150%; font-family: "Segoe UI",sans-serif;'>
+                                                            Mobile number should contain exactly 10 digits!
+                                                        </span>
+
+                                                    </p>
+                                                </td>
+
+
+                                            </tr>
+
+
+
+                                            <tr>
+                                                <td rowspan="2"
+                                                    style='width: 105.2pt; border: solid windowtext 1.0pt; border-top: none; padding: 0cm 5.4pt 0cm 5.4pt;'
+                                                    width='140'>
+                                                    <p style='line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;'>
+                                                        <span
+                                                            style='line-height: 150%; font-family: "Segoe UI",sans-serif;'>email</span>
+                                                    </p>
+                                                </td>
+                                                <td style='width: 324.0pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt;'
+                                                    width='432'>
+                                                    <p style='line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;'>
+                                                        <span
+                                                            style='line-height: 150%; font-family: "Segoe UI",sans-serif;'>Required</span>
+                                                    </p>
+                                                </td>
+                                                <td style='width: 324.0pt; border: solid windowtext 1.0pt; border-left: none; padding: 0cm 5.4pt 0cm 5.4pt;'
+                                                    width='432'>
+                                                    <p
+                                                        style='text-align: center; line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;'>
+
+                                                        <span
+                                                            style='line-height: 150%; font-family: "Segoe UI",sans-serif;'>
+                                                            This field is required!
+                                                        </span>
+
+                                                    </p>
+                                                </td>
+                                            </tr>
+
+
+                                            <tr>
+
+                                                <td style='width: 324.0pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt;'
+                                                    width='432'>
+                                                    <p style='line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;'>
+                                                        <span
+                                                            style='line-height: 150%; font-family: "Segoe UI",sans-serif;'>Email
+                                                            validation - Standard email pattern validation is expected
+                                                        </span>
+                                                    </p>
+                                                </td>
+                                                <td style='width: 324.0pt; border-top: none; border-right: solid windowtext 1.0pt;  border-left: none; padding: 0cm 5.4pt 0cm 5.4pt;'
+                                                    width='432'>
+                                                    <p
+                                                        style='text-align: center; line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;'>
+
+                                                        <span
+                                                            style='line-height: 150%; font-family: "Segoe UI",sans-serif;'>
+                                                            Check email format!
+                                                        </span>
+
+                                                    </p>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style='width: 105.2pt; border: solid windowtext 1.0pt; border-top: none; padding: 0cm 5.4pt 0cm 5.4pt;'
+                                                    width='140'>
+                                                    <p style='line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;'>
+                                                        <span
+                                                            style='line-height: 150%; font-family: "Segoe UI",sans-serif;'>courier</span>
+                                                    </p>
+                                                </td>
+                                                <td style='width: 324.0pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt;'
+                                                    width='432'>
+                                                    <p style='line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;'>
+                                                        <span
+                                                            style='line-height: 150%; font-family: "Segoe UI",sans-serif;'>No
+                                                            validators but default value should be 'domestic'</span>
+                                                    </p>
+                                                </td>
+                                                <td style='width: 324.0pt; border: solid windowtext 1.0pt; border-left: none; padding: 0cm 5.4pt 0cm 5.4pt;'
+                                                    width='432'>
+                                                    <p
+                                                        style='text-align: center; line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;'>
+
+                                                        <span
+                                                            style='line-height: 150%; font-family: "Segoe UI",sans-serif;'>
+                                                            -
+                                                        </span>
+
+                                                    </p>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style='width: 105.2pt; border: solid windowtext 1.0pt; border-top: none; padding: 0cm 5.4pt 0cm 5.4pt;'
+                                                    width='140'>
+                                                    <p style='line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;'>
+                                                        <span
+                                                            style='line-height: 150%; font-family: "Segoe UI",sans-serif;'>gift</span>
+                                                    </p>
+                                                </td>
+                                                <td style='width: 324.0pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt;'
+                                                    width='432'>
+                                                    <p style='line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;'>
+                                                        <span
+                                                            style='line-height: 150%; font-family: "Segoe UI",sans-serif;'>No
+                                                            validators</span>
+                                                    </p>
+                                                </td>
+                                                <td style='width: 324.0pt; border: solid windowtext 1.0pt; border-left: none; padding: 0cm 5.4pt 0cm 5.4pt;'
+                                                    width='432'>
+                                                    <p
+                                                        style='text-align: center; line-height: 150%; margin: 0cm 0cm .0001pt 18.0pt;'>
+
+                                                        <span
+                                                            style='line-height: 150%; font-family: "Segoe UI",sans-serif;'>
+                                                           -
+                                                        </span>
+
+                                                    </p>
+                                                </td>
+                                            </tr>
+
+
+
+
+                                        </tbody>
+                                    </table>
+                                    <br>
+                                    <p style="margin-left: 22.0pt; line-height: 150%;">
+                                        <span style="line-height: 150%; font-family: 'Segoe UI',sans-serif;">
+                                            <b>Note: </b>id, productName,cost form field values should be auto populated
+                                            based on the data
+                                            retrieved from the getProductDetails() method of SharedService.
+                                            <br /> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Use button tag to create button and it should remain
+                                            disabled until the form becomes valid. </span>
+                                    </p>
+                                </li>
+
+                                <li>
+
+                                    On click of Enquire Us button invoke enquireOrder() method of SharedService by
+                                    passing form data as parameter
+                                    and populate successMessage and errorMessage accordingly.
+                                </li>
+
+
+
+                            </ol>
+
+
+
+
+                        </div>
+                        <p style='margin-bottom: .0001pt; line-height: normal; background: white;'>
+                            <span
+                                style='font-size: 12.0pt; font-family: "Segoe UI",sans-serif; color: black;'>&nbsp;</span>
+                        </p>
+                        <strong>Files to Edit:</strong> enquire-order.component.ts, enquire-order.component.html
+                        <p style='margin-bottom: .0001pt; line-height: normal; background: white;'>
+                            <span
+                                style='font-size: 12.0pt; font-family: "Segoe UI",sans-serif; color: black;'>&nbsp;</span>
+                        </p>
+                        <div><strong>Test cases to be passed for this requirement: 17</strong></div>
+                        <p style='margin-bottom: .0001pt; line-height: normal; background: white;'>
+                            <span
+                                style='font-size: 12.0pt; font-family: "Segoe UI",sans-serif; color: black;'>&nbsp;</span>
+                        </p>
+                        <div>
+                            <strong>Output:</strong>
+                            <br><br>
+
+                        </div>
+                        <img src="./gif/enquireOrder.gif" />
+
+                    </div>
+                </div>
+            </div>
+
+            <p style='margin-bottom: .0001pt; line-height: 115%;'>
+                <strong>
+                    <span style='line-height: 115%; font-family: "Segoe UI",sans-serif;'>&nbsp;</span>
+                </strong>
+            </p>
+            <p style='margin-bottom: .0001pt; line-height: 115%;'>
+                <strong>
+                    <span style='line-height: 115%; font-family: "Segoe UI",sans-serif;'>&nbsp;</span>
+                </strong>
+            </p>
+            <p style='text-align: center; line-height: 150%;'>
+                <span class='heading'>~~~~~~~~~~~~~~ All the Best ~~~~~~~~~~~~~~</span>
+                </strong>
+            </p>
+
+            <div align='center'>
+                <button class='uk-button uk-button-primary uk-button-small uk-flex uk-flex-middle uk-icon'
+                    onclick='showQuestions()'>Prev</button>
+            </div>
+            <p style='line-height: 115%; margin: 0cm 0cm .0001pt 18.0pt;'>
+                <span style='font-size: 12.0pt; line-height: 115%; font-family: "Segoe UI",sans-serif;'>&nbsp;</span>
+            </p>
+            <button onclick="topFunction()" id="topB" title="Go to top">Top</button>
+        </div>
+
+        <div style='display:none' id='instructions_p'>
+
+            <br>
+            <br>
+            <div>
+                <div align='center'>
+                    <span class='heading'> Angular Assessment </span>
+                </div>
+            </div>
+            <br>
+            <span class='heading'>Startup Instruction:</span>
+            </p>
+
+            <ul style='margin-top: 0cm;'>
+                <li>On the desktop click on the file &lsquo;<b>Click Here</b>&rsquo; and then click on &lsquo;
+                    <b>Execute </b>&rsquo;
+                </li>
+                <li>This is will automatically start backend server , install node modules , open VS Code & start the
+                    application in browser .</li>
+                <li>This will take atleast <b>2-3 mins</b> to setup the environment and you can start coding once the
+                    application is opened in browser.</li>
+                <li>You just need to code in the
+                    <b>Frontend</b> application.
+                </li>
+                <li>Read the problem statement and the other details provided carefully and implement the solution.</li>
+            </ul>
+            <p style='margin-bottom: .0001pt; line-height: normal; background: white;'>
+                <span style='font-size: 12.0pt; font-family: "Segoe UI",sans-serif; color: black;'>&nbsp;</span>
+            </p>
+            <p style='margin-bottom: .0001pt; line-height: normal; background: white;'>
+                <span class='heading'>Project Instruction:</span>
+            </p>
+            <p style='margin-bottom: .0001pt; line-height: normal; background: white;'>
+                <span style='font-size: 12.0pt; font-family: "Segoe UI",sans-serif; color: black;'>&nbsp;</span>
+            </p>
+            <ul style='margin-top: 0cm;'>
+                <li>A single problem statement which consists of
+                    <strong>6 steps</strong> needs to be implemented.
+                </li>
+                <li>You need to solve this problem statement in
+                    <strong>3 Hours</strong>.
+                </li>
+                <li>
+                    <strong>Backend</strong> folder contains the
+                    <strong>server side code</strong>.
+                    <ul>
+                        <li>The Backend API service is running at port
+                            <b>3020.</b>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <strong>Frontend</strong> folder should contains the
+                    <strong>client side code.</strong>
+                    <ul>
+                        <li>
+                            <strong>DO NOT</strong> alter the function name or the argument list of the function that is
+                            provided to you.
+                        </li>
+                        <li>
+                            <strong>DO NOT</strong> add any new functions apart from the one given in the file where you
+                            write
+                            the solution.
+                        </li>
+                        <li>You may use the
+                            Bootstrap classes/provided CSS wherever necessary.
+                        </li>
+                    </ul>
+                </li>
+
+
+            </ul>
+            <p style='margin-bottom: .0001pt; line-height: normal; background: white;'>
+                <span style='font-size: 12.0pt; font-family: "Segoe UI",sans-serif; color: black;'>&nbsp;</span>
+            </p>
+
+            <div align='center'>
+                <button class='uk-button uk-button-primary uk-button-small'
+                    onclick='showWelcome();'>Prev</button>&nbsp;&nbsp;&nbsp;
+                <button onclick='showQuestions()' class='uk-button uk-button-primary uk-button-small'>Next</button>
+            </div>
+        </div>
+        <br>
+        <br>
+
+        <!-------------------------------------------------------------------------------- -->
+
+        <div style='display:none' id='questions_p'>
+            <div>
+                <div align='center'>
+                    <span class='heading'> Angular Assessment </span>
+                </div>
+            </div>
+            <br />
+
+            <p style='line-height: 150%; page-break-after: avoid; margin: 12.0pt 0cm .0001pt 0cm;'>
+                <span class='heading'>Problem Description:</span>
+            </p>
+            <p style='margin-bottom: .0001pt; line-height: normal; background: white;'>
+                <span style='font-size: 12.0pt; font-family: "Segoe UI",sans-serif; color: black;'>&nbsp;</span>
+            </p>
+            <p style='text-align: justify; line-height: 150%;'>
+                <span style='line-height: 150%; font-family: "Segoe UI",sans-serif;'>
+                    <strong>AntiqMart</strong>
+                    is an online showroom of antique items where customers across the globe can browse through the
+                    various
+                    antique items, view product details and also place an enquiry for the selected item.
+
+                </span>
+            </p>
+            <div>
+                <img src="./gif/ps2.gif" />
+            </div>
+
+            <p style='margin-bottom: .0001pt; line-height: normal; background: white;'>
+                <span style='font-size: 12.0pt; font-family: "Segoe UI",sans-serif; color: black;'>&nbsp;</span>
+            </p>
+            <p style='text-align: justify; line-height: 150%;'>
+                <span style='line-height: 150%; font-family: "Segoe UI",sans-serif;'>
+                    <b>Details of Backend API service (Implemented)-</b>
+                </span>
+            </p>
+            <ul type='disc'>
+                <li>
+                    <p style='text-align: justify; line-height: 150%;'>
+                        <strong>
+                            <span style='line-height: 150%; font-family: "Segoe UI",sans-serif;'>Order Enquiry</span>
+                        </strong>
+                        <span style='line-height: 150%; font-family: "Segoe UI",sans-serif;'> &ndash; This service
+                            registers enquiry details of the customers by sending POST request at
+                            <em>/enquiries </em> and it returns the following response:
+                        </span>
+                    </p>
+                    <p style='text-align: justify; line-height: normal; margin-left: 20px;'>
+                        <em>
+                            <span style='font-family: "Segoe UI",sans-serif;'>{ "message": "Thanks for connecting with
+                                us. Your enquiry has been registered with enquiry id: 6. Please use this id during
+                                future contact." }
+                            </span>
+                        </em>
+                    </p>
+                </li>
+                <p style='text-align: justify; line-height: normal;'>
+                    <em>
+                        <span style='font-family: "Segoe UI",sans-serif;'>&nbsp;</span>
+                    </em>
+                </p>
+
+
+
+                <li>
+                    <p style='text-align: justify; line-height: 150%;'>
+                        <strong>
+                            <span style='line-height: 150%; font-family: "Segoe UI",sans-serif;'>Fetch Antique
+                                Products</span>
+                        </strong>
+                        <span style='line-height: 150%; font-family: "Segoe UI",sans-serif;'> &ndash; This service returns a
+                            JSON response containing the list of various antique products and their details
+                            by making a GET request to
+                            <em>/products</em>:
+                        </span>
+                    </p>
+                    <p style='text-align: justify; line-height: normal; margin-left: 20px;'>
+                        <em>
+                            <span style='font-family: "Segoe UI",sans-serif;'> You can hit
+                                http://localhost:3020/products from the browser and check the response.
+                            </span>
+                        </em>
+                    </p>
+
+
+                </li>
+
+                <p style='text-align: justify; line-height: normal;'>
+                    <em>
+                        <span style='font-family: "Segoe UI",sans-serif;'>&nbsp;</span>
+                    </em>
+                </p>
+                <li>
+                    <p style='text-align: justify; line-height: 150%;'>
+                        <strong>
+                            <span style='line-height: 150%; font-family: "Segoe UI",sans-serif;'>Fetch Product
+                                Details</span>
+                        </strong>
+                        <span style='line-height: 150%; font-family: "Segoe UI",sans-serif;'> &ndash; This service returns a
+                            JSON response containing details of the particular product with the given id by
+                            making a GET request to
+                            <em>/products/:id</em>:
+                        </span>
+                    </p>
+                    <p style='text-align: justify; line-height: normal; margin-left: 20px;'>
+                        <em>
+                            <span style='font-family: "Segoe UI",sans-serif;'> You can hit
+                                http://localhost:3020/products/3 from the browser and check the response.
+                            </span>
+                        </em>
+                    </p>
+
+
+                </li>
+
+
+
+            </ul>
+            <br>
+
+            <div>
+                <p>
+                    Move to next page to get Step-by-step instructions for implementing the problem statement.
+                </p>
+            </div>
+
+            <div align='center'>
+                <button class='uk-button uk-button-primary uk-button-small'
+                    onclick='showInstructions();'>Prev</button>&nbsp;&nbsp;&nbsp;
+                <button onclick='showSteps()' class='uk-button uk-button-primary uk-button-small'>Next</button>
+            </div>
+        </div>
+
+        <!-- ------------------------------------------------------------------------------- -->
+
+        <div style='display:none' id='welcome_p'>
+            <div>
+                <div align='center'>
+                    <span class='heading'> Angular Assessment </span>
+                </div>
+            </div>
+            <br>
+            <div>
+                <span class='heading'>Must Read Instructions Before You Start Your Assessment:</span>
+                <p style='margin-bottom: .0001pt; line-height: normal; background: white;'>
+                    <span style='font-size: 12.0pt; font-family: "Segoe UI",sans-serif; color: black;'>&nbsp;</span>
+                </p>
+                <ul>
+                    <li>
+                        You have been provided with an environment with the necessary softwares and tools for you to
+                        complete the assessment. Your
+                        time will start only after you enter the environment.
+                    </li>
+                    <br>
+                    <li>The Project has already been loaded into your environment. Execute the file 'Click here' to
+                        complete
+                        the
+                        setup. In case you close this tab/browser, you can execute the file 'instructions.sh' to reopen
+                        this
+                        page.
+                    </li>
+                    <br>
+                    <li>Two buttons &lsquo;Run&rsquo; and &lsquo;Finish&rsquo; are given in the environment. Click on
+                        &lsquo;Run&rsquo;
+                        to intermediately test your solution. Click on &lsquo;Finish&rsquo; to submit your code and
+                        close
+                        your
+                        environment.
+                    </li>
+                    <br>
+                    <li>Once the test is finished, you cannot retrieve your code again.</li>
+                    <br>
+                    <li>
+                        You cannot copy the code to your system from the environment or vice-versa.
+                    </li>
+                    <br>
+                    <li>
+                        In case of any issue, you can reopen your environment by reopening the test in your browser as
+                        long
+                        as you have time left.
+                    </li>
+                    <br>
+                    <li>
+                        Your result will be saved only when you finish the test or when your time expires. It will not
+                        be
+                        saved if the test is not
+                        open in a browser when your time is up.
+                    </li>
+                </ul>
+            </div>
+
+
+            <div align='center'>
+                <button class='uk-button uk-button-primary uk-button-small uk-flex uk-flex-middle uk-icon'
+                    onclick='showInstructions()'>Next</button>
+            </div>
+            <br>
+        </div>
+
+        <!--------------------------------------------------------------------------------- -->
+    </div>
+    </div>
+
+</body>
+<script src='./js/new.js' rel='text/javascript'></script>
+<script>
+
+    //Get the button
+    var mybutton = document.getElementById("topB");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+
+</script>
+<script>showWelcome();</script>
+
+</html>

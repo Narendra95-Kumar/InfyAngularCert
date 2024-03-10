@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "name": "Wooden Craft Clock",
+        "cost": 5000,
+        "color": "Brown",
+        "description": "Wooden clock with a class dail",
+        "img": "../assets/Picture3.jpg",
+        "category": "clock",
+        "size": "5 cm * 5 cm"
+    },
+    {
+        "id": 2,
+        "name": "painting",
+        "cost": 10000,
+        "color": "blue",
+        "description": "Oil painting",
+        "img": "../assets/Picture7.1.jpg",
+        "category": "painting",
+        "size": "5 cm * 5 cm"
+    },
+    {
+        "id": 3,
+        "name": "Pottery",
+        "cost": 3000,
+        "color": "yellow",
+        "description": "Pottery",
+        "img": "../assets/Picture6.jpg",
+        "category": "pottery",
+        "size": "5 cm * 5 cm"
+    },
+    {
+        "id": 4,
+        "name": "Transparent Wall Clock",
+        "cost": 5400,
+        "color": "Dark Brown",
+        "description": "Stylish and Antique finish wall decor piece for your home.",
+        "img": "../assets/Picture3.1.jpg",
+        "category": "clock",
+        "size": "10 cm * 10 cm"
+    },
+    {
+        "id": 5,
+        "name": "Table Top Alarm Clock",
+        "cost": 500,
+        "color": "Black and Brown",
+        "description": "Analog Table Desk Small Clock for Living Room, Bedroom, Kitchen, Home, Office etc. ",
+        "img": "../assets/Picture3.2.jpg",
+        "category": "clock",
+        "size": "17*12.5*5.5 cm"
+    },
+    {
+        "id": 6,
+        "name": "painting",
+        "cost": 10000,
+        "color": "blue",
+        "description": "Oil painting",
+        "img": "../assets/Picture7.2.jpg",
+        "category": "painting",
+        "size": "5 cm * 5 cm"
+    },
+    {
+        "id": 7,
+        "name": "Chair",
+        "cost": 3000,
+        "color": "Brown",
+        "description": "Four leg chair",
+        "img": "../assets/Picture8.jpg",
+        "category": "furniture",
+        "size": "5 cm * 5 cm"
+    }
+]
