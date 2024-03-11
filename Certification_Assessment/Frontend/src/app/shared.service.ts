@@ -11,14 +11,15 @@ export class SharedService {
 
 
 
-
+  private baseUrl = 'http://localhost:3020';
   /*
  Consumes the web service exposed at the GET URL -> http://localhost:3020/products
  After sending the request, the response must be an Observable
  Return the response back to the ProductsComponent
 */
   getProductListDetails(): Observable<any> {
-    return null
+    const url = `${this.baseUrl}/products`;
+    return this.http.get<any>(url);
   }
 
   /*
@@ -27,7 +28,8 @@ export class SharedService {
  Return the response back to the EnquireOrderComponent
 */
   enquireOrder(details: any): Observable<any> {
-    return null
+    const url = `${this.baseUrl}/enquiries`;
+    return this.http.post<any>(url, details);
   }
 
   /*
@@ -37,6 +39,7 @@ export class SharedService {
 */
 
   getProductDetails(id: any): Observable<any> {
-    return null
+    const url = `${this.baseUrl}/products/${id}`;
+    return this.http.get<any>(url);
   }
 }

@@ -1,0 +1,4 @@
+table {
+    width: auto;
+    table-layout: auto; /* Autofit width based on content */
+}

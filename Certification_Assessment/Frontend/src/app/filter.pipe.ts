@@ -1,6 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-
 /*
 It should filter the products array based on category type
 
@@ -39,7 +38,10 @@ Output:
 export class FilterPipe implements PipeTransform {
 
   transform(products: any[], category: string): any[] {
-    return null
+    if (!products || !category) {
+      return products;
+    }
+    return products.filter(product => product.category === category);
   }
 
 }

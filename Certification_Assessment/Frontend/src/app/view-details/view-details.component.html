@@ -4,7 +4,30 @@
     <!-- Display Product Details here -->
     <!-- Hint: Refer below code to dismiss modal
         <button class="btn btn-success" type="button" data-bs-dismiss="modal">button</button> -->
-   
+        <table>
+            <tr>
+                <th>Product Name</th>
+                <td>{{ productDetails.productName }}</td>
+            </tr>
+            <tr>
+                <th>Product Cost</th>
+                <td>{{ productDetails.cost }}</td>
+            </tr>
+            <tr>
+                <th>Color</th>
+                <td>{{ productDetails.color }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ productDetails.description }}</td>
+            </tr>
+            <tr>
+                <th>Size</th>
+                <td>{{ productDetails.size }}</td>
+            </tr>
+        </table>
+    <br />
+    <button class="btn btn-success" data-bs-dismiss="modal" type="button" (click)="placeOrder()">Enquire Order</button>
 </div>
 
 

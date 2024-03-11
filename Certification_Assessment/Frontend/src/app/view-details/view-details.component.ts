@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component , Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { SharedService } from '../shared.service';
 
@@ -12,8 +12,9 @@ export class ViewDetailsComponent {
   constructor(private router: Router, private service: SharedService) { }
 
   // Use the appropriate decorator to retrieve data from ProductsComponent
-  productDetails: any = {}
-
+  @Input() productDetails: any;
+  successMessage: string = '';
+  errorMessage: string = '';
 
 
   placeOrder() {
@@ -21,6 +22,11 @@ export class ViewDetailsComponent {
    1. It should navigate to /enquire-order/:id 
   
    */
+
+   if (this.productDetails && this.productDetails.id) {
+    // Navigate to the enquire-order route with the product id
+    this.router.navigate(['/enquire-order', this.productDetails.id]);
+  }
 
   }
 

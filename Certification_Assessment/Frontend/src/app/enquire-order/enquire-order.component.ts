@@ -15,14 +15,19 @@ export class EnquireOrderComponent implements OnInit {
   productDetails: any
   successMessage: string = ""
   errorMessage: string = ""
-  constructor(private formBuilder: FormBuilder, private service: SharedService, private route: ActivatedRoute) {
-
-  }
-
-
   enquiryForm: FormGroup = new FormGroup({});
-
-
+  constructor(private formBuilder: FormBuilder, private service: SharedService, private route: ActivatedRoute) {
+    this.enquiryForm = this.formBuilder.group({
+      id: [{ value: '', disabled: true }, Validators.required],
+      productName: [{ value: '', disabled: true }, Validators.required],
+      cost: [{ value: '', disabled: true }, Validators.required],
+      mobile: ['', [Validators.required, Validators.pattern('^[0-9]{10}$')]],
+      email: ['', [Validators.required, Validators.email]],
+      message: ['', Validators.required],
+      courier: ['domestic'],
+      gift: [false]
+    });
+  }
 
   ngOnInit(): void {
   /* 1. It should invoke getProductDetails() method of SharedService by passing 'id' value that can 
@@ -32,7 +37,20 @@ export class EnquireOrderComponent implements OnInit {
         method of SharedService 
      4. Refer QP for further details on form validations  */
 
- 
+     // Extract product ID from route parameters
+    const productId = this.route.snapshot.paramMap.get('id');
+    
+     this.service.getProductDetails(productId).subscribe(
+      (response) => {
+        this.productDetails = response;
+        // Populate form fields with product details
+        this.enquiryForm.patchValue({
+          id: response.id,
+          productName: response.productName,
+          cost: response.cost
+        });
+      }
+    );
  
   }
 
@@ -43,6 +61,19 @@ export class EnquireOrderComponent implements OnInit {
   */
 
   enquireOrder() {
-
+    if (this.enquiryForm.valid) {
+      // Perform enquire order action
+      const enquiryData = this.enquiryForm.getRawValue();
+      this.service.enquireOrder(enquiryData).subscribe(
+        (response) => {
+          this.successMessage = response.message;
+          this.errorMessage = '';
+        },
+        (error) => {
+          this.successMessage = '';
+          this.errorMessage = error.message;
+        }
+      );
+    }
 }
 }

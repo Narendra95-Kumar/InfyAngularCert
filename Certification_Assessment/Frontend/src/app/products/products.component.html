@@ -5,9 +5,26 @@
         <div class="text-end">
             <!-- Create a dropdown to filter the products (To be implemented
                 as part of Requirement-4) -->
-
+            <select class="form-select" [(ngModel)]="selectedCategory">
+                <option value="">All Categories</option>
+                <option *ngFor="let category of categoryList" [value]="category">{{ category }}</option>
+            </select>
         </div>
         <div>
+            <div *ngIf="productList">
+                <div class="row">
+                    <div class="col-md-4 mb-3" *ngFor="let product of productList | filter:selectedCategory">
+                        <p class="card-text">Category: {{ product.category }}</p>
+                        <div class="card">
+                            <div class="card-body">
+                                <img [src]="product.img" class="card-img-top" alt="Product Image">
+                                <p class="card-text">{{ product.price }}</p>
+                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#viewModal" (click)="openViewModal(product)">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!-- Display the products  -->
             
             <!-- Hint: Refer below code to load modal on click of button 
@@ -23,7 +40,7 @@
             <div class="modal-content">
                 <!--  Add necessary code to load ViewDetailsComponent and send selected
                 product data to the productDetails property of ViewDetailsComponent   -->
-              
+                <app-view-details [productDetails]="selectedProduct"></app-view-details>
             </div>
         </div>
     </div>

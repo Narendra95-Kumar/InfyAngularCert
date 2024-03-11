@@ -5,7 +5,72 @@
             <h4 class="font-monospace text-center">Enquire Order</h4>
             <br />
              <!-- Create the form -->
-           
+             <form [formGroup]="enquiryForm" (ngSubmit)="enquireOrder()">
+                <div class="mb-3">
+                    <label class="form-label">Product ID</label>
+                    <input type="text" class="form-control" formControlName="id" disabled>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Product Name</label>
+                    <input type="text" class="form-control" formControlName="productName" disabled>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Product Cost</label>
+                    <input type="text" class="form-control" formControlName="cost" disabled>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Message</label>
+                    <input type="text" class="form-control" formControlName="message">
+                    <div *ngIf="enquiryForm.get('message').errors?.required" class="text-danger">
+                        This field is required!
+                    </div>
+                    <div *ngIf="enquiryForm.get('message').errors?.pattern" class="text-danger">
+                        Match the required pattern!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Mobile</label>
+                    <input type="text" class="form-control" formControlName="mobile">
+                    <div *ngIf="enquiryForm.get('mobile').errors?.required" class="text-danger">
+                        This field is required!
+                    </div>
+                    <div *ngIf="enquiryForm.get('mobile').errors?.pattern" class="text-danger">
+                        Mobile number should contain exactly 10 digits!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Email</label>
+                    <input type="text" class="form-control" formControlName="email">
+                    <div *ngIf="enquiryForm.get('email').errors?.required" class="text-danger">
+                        This field is required!
+                    </div>
+                    <div *ngIf="enquiryForm.get('email').errors?.email" class="text-danger">
+                        Check email format!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Courier</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="domestic" value="domestic" formControlName="courier">
+                        <label class="form-check-label" for="domestic">Domestic</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="international" value="international" formControlName="courier">
+                        <label class="form-check-label" for="international">International</label>
+                    </div>
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" formControlName="gift">
+                    <label class="form-check-label">Gift</label>
+                </div>
+                <button type="submit" class="btn btn-primary" [disabled]="!enquiryForm.valid">Enquire Us</button>
+            </form>
+            <div *ngIf="successMessage" class="alert alert-success" role="alert">
+                {{ successMessage }}
+            </div>
+            <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+                {{ errorMessage }}
+            </div>
         </div>
     </div>
 </div>
