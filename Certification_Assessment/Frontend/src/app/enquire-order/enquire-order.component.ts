@@ -23,7 +23,7 @@ export class EnquireOrderComponent implements OnInit {
       cost: [{ value: '', disabled: true }, Validators.required],
       mobile: ['', [Validators.required, Validators.pattern('^[0-9]{10}$')]],
       email: ['', [Validators.required, Validators.email]],
-      message: ['', Validators.required],
+      message: ['', [Validators.required, Validators.pattern('^[a-zA-Z ]+$')]],
       courier: ['domestic'],
       gift: [false]
     });
