@@ -1,4 +1,4 @@
-<div class="container-fluid py-1">
+<div class="container-fluid py-1" *ngIf="productDetails">
     <h4 class="font-monospace">Product Details</h4>
     <br />
     <!-- Display Product Details here -->
@@ -28,6 +28,8 @@
         </table>
     <br />
     <button class="btn btn-success" data-bs-dismiss="modal" type="button" (click)="placeOrder()">Enquire Order</button>
+    <br>
+    <button class="btn btn-info" type="button" data-bs-dismiss="modal">Close</button> 
 </div>
 
 

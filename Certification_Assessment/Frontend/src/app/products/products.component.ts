@@ -28,7 +28,7 @@ export class ProductsComponent implements OnInit {
         this.productList = response
       }
     );
-
+    this.selectedCategory = ""
   }
 
   openViewModal(product: any): void {

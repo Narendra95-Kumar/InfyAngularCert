@@ -18,16 +18,9 @@ export class ViewDetailsComponent {
 
 
   placeOrder() {
-    /*
-   1. It should navigate to /enquire-order/:id 
-  
-   */
-
-   if (this.productDetails && this.productDetails.id) {
-    // Navigate to the enquire-order route with the product id
-    this.router.navigate(['/enquire-order', this.productDetails.id]);
-  }
-
+    if (this.productDetails && this.productDetails.id) {
+      this.router.navigate(['/enquire-order', this.productDetails.id]);
+    }
   }
 
 }
