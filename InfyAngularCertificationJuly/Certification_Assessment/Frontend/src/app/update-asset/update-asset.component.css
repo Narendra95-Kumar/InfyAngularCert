@@ -1,0 +1,17 @@
+
+.panel-heading {
+  text-align: center;
+  background-color: rgba(22, 70, 88, 0.651);
+  border:  rgba(22, 70, 88, 0.651);
+  color:white
+}
+
+.panel-body {
+  background-color: rgba(255, 255, 255, 0.616);
+  border:  rgba(22, 70, 88, 0.651);
+}
+
+.panel {
+  background-color: rgba(255, 255, 255, 0.514);
+  border:  rgba(16, 65, 32, 0.651);
+}

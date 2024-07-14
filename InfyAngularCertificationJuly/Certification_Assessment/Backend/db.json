@@ -1,0 +1,44 @@
+{
+  "assetDetails": [
+    {
+      "assetId": 1001,
+      "assetName": "Dell Inspiron",
+      "assetCategory": "Laptop",
+      "assetDescription": "10th Gen Intel Core Processor, 8GB DDR4 RAM",
+      "dateOfPurchase": "10-2-2020",
+      "assetCost": 50000
+    },
+    {
+      "assetId": 1002,
+      "assetName": "Lenovo Laptop",
+      "assetCategory": "Laptop",
+      "assetDescription": "32 GB RAM, win 10 Pro 64-bit",
+      "dateOfPurchase": "2020-02-10",
+      "assetCost": 85000
+    },
+    {
+      "assetId": 1003,
+      "assetName": "D-Link",
+      "assetCategory": "Router",
+      "assetDescription": "Wireless",
+      "dateOfPurchase": "2018-05-08",
+      "assetCost": 4000
+    },
+    {
+      "assetId": 1004,
+      "assetName": "Cisco Unified IP Phone",
+      "assetCategory": "VoIP",
+      "assetDescription": "NA",
+      "dateOfPurchase": "2018-12-20",
+      "assetCost": 8000
+    },
+    {
+      "assetId": 1005,
+      "assetName": "Hp Desktop",
+      "assetCategory": "Desktop",
+      "assetDescription": "NA",
+      "dateOfPurchase": "2019-09-21",
+      "assetCost": 35000
+    }
+  ]
+}
