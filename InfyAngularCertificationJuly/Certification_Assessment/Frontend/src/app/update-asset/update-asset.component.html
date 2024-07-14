@@ -11,7 +11,37 @@
     <div class="panel panel-primary">
       <div class="panel-heading">Update Asset</div>
       <div class="panel-body">
-        <!-- Code here -->
+        <form [formGroup]="updateAssetForm" (ngSubmit)="updateAsset()" novalidate>
+          <div class="form-group">
+            <label for="updateField">Field to Update</label>
+            <select formControlName="updateField" class="form-control" id="updateField">
+              <option value="" disabled selected>Select Field</option>
+              <option value="assetName">Asset Name</option>
+              <option value="assetCategory">Asset Category</option>
+              <option value="assetDescription">Asset Description</option>
+            </select>
+            <div *ngIf="updateAssetForm.get('updateField').invalid && (updateAssetForm.get('updateField').dirty || updateAssetForm.get('updateField').touched)"
+                 class="alert alert-danger">
+              <div *ngIf="updateAssetForm.get('updateField').errors.required">
+                Field to Update is required.
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="updateValue">New Value</label>
+            <input type="text" formControlName="updateValue" class="form-control" id="updateValue">
+            <div *ngIf="updateAssetForm.get('updateValue').invalid && (updateAssetForm.get('updateValue').dirty || updateAssetForm.get('updateValue').touched)"
+                 class="alert alert-danger">
+              <div *ngIf="updateAssetForm.get('updateValue').errors.required">
+                New Value is required.
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" [disabled]="!updateAssetForm.valid">Update Asset</button>
+        </form>
+        <div *ngIf="successMessage" class="alert alert-success">
+          {{ successMessage }}
+        </div>
       </div>
     </div>
   </div>

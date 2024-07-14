@@ -15,7 +15,6 @@ import { UpdateAssetComponent } from "./update-asset/update-asset.component";
 
 export const routes: Routes = [
   { path: '', redirectTo: '/addAsset', pathMatch: 'full' },
-  { path: '**', redirectTo: '/addAsset' },
   { path: 'addAsset', component: AddAssetComponent },
   { path: 'viewAsset', component: ViewAssetComponent },
   { path: 'updateAsset/:assetId', component: UpdateAssetComponent },

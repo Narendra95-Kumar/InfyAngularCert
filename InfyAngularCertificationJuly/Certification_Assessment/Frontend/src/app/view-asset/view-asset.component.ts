@@ -27,6 +27,16 @@ The error callback should populate the errorMessage with the message in response
 */
   viewAsset() {
     // code here
+    this.assetService.getAssetDetails(parseInt(this.assetId, 10)).subscribe(
+      (response: Asset) => {
+        this.assetDetails = response;
+        this.errorMessage = '';
+      },
+      (error: any) => {
+        this.errorMessage = 'Asset not found';
+        this.assetDetails = null;
+      }
+    )
   }
 
   /*
@@ -34,6 +44,7 @@ It should navigate to /updateAsset/:assetId
 */
   update() {
     //  code here
+    this.router.navigate([`/updateAsset/${this.assetId}`]);
   }
 
 }

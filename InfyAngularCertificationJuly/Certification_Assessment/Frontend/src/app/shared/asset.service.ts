@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
+import {Observable} from 'rxjs';
 
 
 
@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AssetService {
 
-  url = 'http://localhost:3020/assetDetails'; /*Provide the URL of the web service to consume*/
+  baseUrl = 'http://localhost:3020/assetDetails'; /*Provide the URL of the web service to consume*/
   authenticate = false;
   constructor(private httpClient: HttpClient) { }
 
@@ -19,8 +19,9 @@ export class AssetService {
     Return the response back to the AddAssetComponent
   */
 
-  addAsset(data: any) {
+  addAsset(data: any): Observable<any> {
     // Code here
+    return this.httpClient.post<any>(this.baseUrl, data);
   }
 
 
@@ -34,7 +35,7 @@ export class AssetService {
 
   getAssetDetails(assetId) {
     // Code here
-
+    const url = `${this.baseUrl}/${assetId}`;
   }
 
   /*
@@ -45,6 +46,8 @@ export class AssetService {
 
   updateAsset(assetId, data) {
     // Code here
+    const patchURL = `${this.baseUrl}/${assetId}`;
+    return this.httpClient.patch<any>(patchURL, data);
   }
 
 

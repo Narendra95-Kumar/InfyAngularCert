@@ -12,7 +12,53 @@
     <div class="panel-heading ">Add a new Asset</div>
     <div class="panel-body">
 
-      <!-- code here -->
+      <form [formGroup]="addAssetForm" (ngSubmit)="addAsset()">
+        <div class="form-group">
+          <label for="assetName">Asset Name</label>
+          <input type="text" formControlName="assetName" id="assetName" class="form-control"/>
+          <div *ngIf="addAssetForm.controls.assetName.invalid && (addAssetForm.controls.assetName.dirty || addAssetForm.controls.assetName.touched)" class="text-danger">
+            Asset Name is required
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="assetCategory">Asset Category</label>
+          <select formControlName="assetCategory" id="assetCategory" class="form-control">
+            <option *ngFor="let category of assetCategories" [value]="category.value" [disabled]="category.disabled">
+              {{ category.displayText }}
+            </option>
+          </select>
+          <div *ngIf="addAssetForm.controls.assetCategory.invalid && (addAssetForm.controls.assetCategory.dirty || addAssetForm.controls.assetCategory.touched)" class="text-danger">
+            Asset Category is required
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="dateOfPurchase">Date of Purchase</label>
+          <input type="date" formControlName="dateOfPurchase" id="dateOfPurchase" class="form-control"/>
+          <div *ngIf="addAssetForm.controls.dateOfPurchase.invalid && (addAssetForm.controls.dateOfPurchase.dirty || addAssetForm.controls.dateOfPurchase.touched)" class="text-danger">
+            <div *ngIf="addAssetForm.controls.dateOfPurchase.errors.required">Date of Purchase is required</div>
+            <div *ngIf="addAssetForm.controls.dateOfPurchase.errors.dateInvalid">Date should not be greater than today's date</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="assetCost">Asset Cost</label>
+          <input type="number" formControlName="assetCost" id="assetCost" class="form-control"/>
+          <div *ngIf="addAssetForm.controls.assetCost.invalid && (addAssetForm.controls.assetCost.dirty || addAssetForm.controls.assetCost.touched)" class="text-danger">
+            Asset Cost is required
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="assetDescription">Asset Description</label>
+          <textarea formControlName="assetDescription" id="assetDescription" class="form-control"></textarea>
+          <div *ngIf="addAssetForm.controls.assetDescription.invalid && (addAssetForm.controls.assetDescription.dirty || addAssetForm.controls.assetDescription.touched)" class="text-danger">
+            <div *ngIf="addAssetForm.controls.assetDescription.errors.required">Asset Description is required</div>
+            <div *ngIf="addAssetForm.controls.assetDescription.errors.maxlength">Maximum 50 characters allowed</div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="addAssetForm.invalid">Add Asset</button>
+      </form>
+      <div *ngIf="successMessage" class="alert alert-success">
+        {{ successMessage }}
+      </div>
     </div>
   </div>
 </div>

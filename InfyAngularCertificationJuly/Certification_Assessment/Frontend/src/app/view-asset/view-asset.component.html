@@ -12,8 +12,50 @@
     <br/>
     <div class="col-md-6 col-md-offset-3">
         <div class="panel panel-primary">
-            <div class="panel-heading">View Booking</div>
-            <!-- Code here -->
+            <div class="panel-heading">View Asset</div>
+            <div class="panel-body">
+                <div class="form-group">
+                  <label for="assetId">Asset ID</label>
+                  <input type="text" [(ngModel)]="assetId" id="assetId" class="form-control"/>
+                </div>
+                <button (click)="viewAsset()" class="btn btn-primary">Get Details</button>
+              </div>
         </div>
+        <div *ngIf="assetDetails" class="panel panel-info">
+            <div class="panel-heading">Asset Details</div>
+            <div class="panel-body">
+              <table class="table table-bordered">
+                <tr>
+                  <th>Asset ID</th>
+                  <td>{{ assetDetails.assetId }}</td>
+                </tr>
+                <tr>
+                  <th>Asset Name</th>
+                  <td>{{ assetDetails.assetName }}</td>
+                </tr>
+                <tr>
+                  <th>Asset Category</th>
+                  <td>{{ assetDetails.assetCategory }}</td>
+                </tr>
+                <tr>
+                  <th>Asset Description</th>
+                  <td>{{ assetDetails.assetDescription }}</td>
+                </tr>
+                <tr>
+                  <th>Date of Purchase</th>
+                  <td>{{ assetDetails.dateOfPurchase }}</td>
+                </tr>
+                <tr>
+                  <th>Asset Cost</th>
+                  <td>{{ assetDetails.assetCost }}</td>
+                </tr>
+              </table>
+              <button (click)="update()" class="btn btn-warning">Update</button>
+            </div>
+          </div>
+
+          <div *ngIf="errorMessage" class="alert alert-danger">
+            {{ errorMessage }}
+          </div>
     </div>
 </div>
